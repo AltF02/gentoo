@@ -32,11 +32,12 @@ IUSE="python ${ALL_LLVM_TARGETS[*]}"
 LLVM_MAX_SLOT=10
 
 RDEPEND="
-	<sys-devel/llvm-11:=
+	<sys-devel/llvm-12:=
 	|| (
 		sys-devel/llvm:8[${LLVM_TARGET_USEDEPS// /,}]
 		sys-devel/llvm:9[${LLVM_TARGET_USEDEPS// /,}]
 		sys-devel/llvm:10[${LLVM_TARGET_USEDEPS// /,}]
+		sys-devel/llvm:11[${LLVM_TARGET_USEDEPS// /,}]
 	)
 	python? ( ${PYTHON_DEPS} )
 "
